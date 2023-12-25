@@ -1,3 +1,21 @@
+// Project Name: Report
+
+// Project description: adding numbers and showing the smallest and largest number and the average number
+
+// Start date: Thursday, December 21
+
+// End date: Sunday, December 25
+
+// Email: robotgoodrobot@gmail.com
+
+// Names of front end developers: 
+// mobin
+// Shayan
+
+// Github developer :
+// @shayanUNK
+// @mobiiiin
+
 // create school object                                       
 //object 
 const school = {
@@ -38,76 +56,92 @@ const school = {
         ]
     }
 };
+console.log(school)
+
+
+
+
+
 
 //                 classA
 
-// jame kol score classA
+//         jame kol score and average classA
 
 let classAScore = school.classes.classA[1].score;
 let jamekolClassA = 0;
+let sum = 0;
+let c = 0;
 
-// start jame score classA
 for (let i = 0; i < classAScore.length; i++) {
-    if (typeof classAScore[i] === "number") {
-        jamekolClassA += classAScore[i];
-    }
-    
+    // jame kol score classA
+    sum += classAScore[i]
+    // tedad students
+    c++;
+    // c = c + 1
 }
+console.log("scores sum =>", sum);
+console.log("average =>", sum / c);
 
-console.log("jame kol scors classA =>", jamekolClassA)
+//      larger and smaller score classA
 
-// larger and smaller score classA
-
-// let larger = school.classes.classA[1].score;
-// let smaller = school.classes.classA[1].score;
 let larger = school.classes.classA[1].score[0];
 let smaller = school.classes.classA[1].score[0];
 
+//        start larger and smaller score classA
+//              start larger
 
-// start larger and smaller score classA
-// start larger
 for (let i = 0; i < classAScore.length; i++) {
-    if ( classAScore[i] > larger ) {
+    if (classAScore[i] > larger) {
         larger = classAScore[i]
     }
-    // and smaller
-   else if ( classAScore[i] < smaller ){
+    //          and smaller
+    else if (classAScore[i] < smaller) {
         smaller = classAScore[i]
     }
-    else{"w;elfwjefwjeip"}
+    else { "its not a number" }
 }
 console.log("larger score in classA =>", larger)
 console.log("smaller score in classA =>", smaller)
 
-//                      classB
 
-// start jame score classB
 
-let classBScore = school.classes.classB[1].score;
+
+
+
+//                 classB
+
+//         jame kol score and average classB
+
+let classBScore = school.classes.classA[1].score;
 let jamekolClassB = 0;
 
+
 for (let i = 0; i < classBScore.length; i++) {
-    if (typeof classBScore[i] === "number") {
-        jamekolClassB += classBScore[i];
-    }
+    // jame kol score classB
+    sum += classBScore[i]
+    // tedad students
+    c++;
+    // c = c + 1
 }
-console.log("jame kol scors classB =>", jamekolClassB)
+console.log("scores sum =>", sum);
+console.log("average =>", sum / c);
 
 let largerB = school.classes.classB[1].score[0];
 let smallerB = school.classes.classB[1].score[0];
 
+//      start larger and smaller score classB
+//              start larger
 
-// start larger and smaller score classB
-// start larger
 for (let i = 0; i < classBScore.length; i++) {
-    if ( classBScore[i] > largerB ) {
+    if (classBScore[i] > largerB) {
         largerB = classBScore[i]
     }
-    // and smaller 
-   else if ( classBScore[i] < smallerB ){
+    //           and smaller 
+
+    else if (classBScore[i] < smallerB) {
         smallerB = classBScore[i]
     }
-    else{"w;elfwjefwjeip"}
+    else { "its not a number" }
 }
 console.log("larger score in classB =>", largerB)
 console.log("smaller score in classB =>", smallerB)
